@@ -58,6 +58,7 @@ cd your-repo
 docker-compose up -d
 3. Check running containers
 docker ps
+
 🌍 Access Services
 Service	URL
 Website	http://localhost:8080
@@ -68,6 +69,7 @@ Grafana	http://localhost:3000
 🔐 Default Grafana Login
 Username: admin
 Password: admin
+
 ☁️ Deployment Steps (High Level)
 Launch EC2 instance (Ubuntu)
 Install Docker & Docker Compose
@@ -78,12 +80,14 @@ Set up domain via Cloudflare DNS
 Configure reverse proxy (Nginx → Docker app)
 Enable HTTPS using Certbot
 Verify monitoring tools (Prometheus & Grafana)
+
 📊 Monitoring Setup
 Prometheus collects metrics from services
 Grafana visualizes metrics using dashboards
 Ports exposed:
 9090 → Prometheus
 3000 → Grafana
+
 ⚠️ Troubleshooting
 Docker Permission Issue
 sudo usermod -aG docker $USER
@@ -99,11 +103,7 @@ Make sure the following ports are open in the Security Group:
 Nginx Config Test
 sudo nginx -t
 sudo systemctl reload nginx
-🔮 Future Improvements
-CI/CD pipeline (GitHub Actions)
-Subdomain routing for Grafana & Prometheus
-Authentication for monitoring dashboards
-Alerts using Prometheus Alertmanager
+
 🙌 Acknowledgment
 
 This project was built as part of a hands-on learning journey in DevOps and Cloud Deployment, focusing on real-world implementation.
